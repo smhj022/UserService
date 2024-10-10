@@ -1,5 +1,6 @@
 package com.smhj.UserService.security.models;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.smhj.UserService.models.Role;
 import com.smhj.UserService.models.User;
 import lombok.Getter;
@@ -15,6 +16,7 @@ import java.util.Random;
 
 @Getter
 @Setter
+@JsonDeserialize
 public class CustomUserDetails implements UserDetails {
 
     private String username;

@@ -2,6 +2,7 @@ package com.smhj.UserService.models;
 
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import lombok.Getter;
@@ -20,7 +21,7 @@ public class User extends BaseModel{
     private String email;
     private String hashedPassword;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     private List<Role> roles;
 
     private boolean isVerified;
